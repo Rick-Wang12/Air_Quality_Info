@@ -13,7 +13,7 @@ class To_xlsx:
 
     def write_to_xlsx(self):
         #Create a Pandas Excel writer using XlsxWriter as the engine.
-        output_path = rf"/Users/wangyaojun/Desktop/{self.file_name}"
+        output_path = rf"{self.file_name}"
       
         writer = pd.ExcelWriter(output_path, engine = 'xlsxwriter')
         df_list = []
