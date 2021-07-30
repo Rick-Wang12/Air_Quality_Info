@@ -1,5 +1,5 @@
 
-### Title: AQI report
+### AQI report
 
 #### Description:
    * Download AQI data from the Environmental Protection Administration, and slice datas of county(s) we queried from it.
