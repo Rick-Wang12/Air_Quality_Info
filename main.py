@@ -10,7 +10,7 @@ from module.Share_file import FileSharer
 
 if __name__ == "__main__":  
     # 設定欲查詢的縣市
-    query_list = ["台北市", "新北市", "台南市", "高雄市", "屏東縣"]
+    query_list = ["台北市", "新北市", "台南市", "高雄市", "屏東縣", "台中市"]
     for i, County in enumerate(query_list):
         if "台" in County:
             County = County.replace('台', '臺')
@@ -74,5 +74,5 @@ if __name__ == "__main__":
     print("Download pdf report by below url.")
     print(file_sharer.share())
 
-    
+
     
