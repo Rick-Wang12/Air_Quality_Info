@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
     # Upload the report to filestack and let user can download it with the url
     filename = f'AQI_report_{date}.xlsx'
-    file_sharer = FileSharer(filepath = rf"/Users/wangyaojun/Desktop/{filename}", api_key = 'A1Ha6kxtcTXOzUHD4eFUjz')
+    file_sharer = FileSharer(filepath = rf"{filename}", api_key = 'A1Ha6kxtcTXOzUHD4eFUjz')
     print("Download pdf report by below url.")
     print(file_sharer.share())
 
