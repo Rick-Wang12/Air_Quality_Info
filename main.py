@@ -1,7 +1,6 @@
 import pandas as pd
 import requests
 import json
-import csv
 from datetime import datetime
 from module.To_Excel import To_xlsx
 from module.Data_processing import Dataframe_list
