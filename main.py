@@ -40,11 +40,13 @@ if __name__ == "__main__":
     # Rename columns 
     data.columns = ["County", "SiteName", "Date:Time", "PM2.5(unit: μg/m3)", "AQI", "Status"]
 
-    for row_index, d in enumerate(data["PM2.5(unit: μg/m3)"]):
-        if d == "ND":
-            data.loc[row_index, "PM2.5(unit: μg/m3)"] = 0
-        elif d == "":
-            data.loc[row_index, "PM2.5(unit: μg/m3)"] = 0
+    # 填補缺失值
+    for column in data.columns:
+        for row_index, d in enumerate(data[column]):
+            if d == "ND": #csv
+                data.loc[row_index, column] = 0
+            elif d == "": # json
+                data.loc[row_index, column] = 0
 
     # Create a list to store datas we queried (each county's data will be stored as an element).
     county_df_list = []
